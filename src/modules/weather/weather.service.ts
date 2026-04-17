@@ -9,8 +9,6 @@ export class WeatherService {
 
   async getCurrentWeather(city: string) {
     const url = `${process.env.WEATHER_BASE_URL}/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}&units=metric`;
-    console.log('BASE URL:', process.env.WEATHER_BASE_URL);
-    console.log('API KEY:', process.env.WEATHER_API_KEY);
     const response = await firstValueFrom(this.httpService.get(url));
     return response.data;
   }
