@@ -8,5 +8,5 @@ export const dbConfig: TypeOrmModuleOptions = {
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   autoLoadEntities: true,
-  synchronize: true, // dev only
+  synchronize: true, 
 };
